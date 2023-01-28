@@ -3,6 +3,8 @@
 #include "Globals.h"
 #include "glmath.h"
 
+class Vehiculo;
+
 class ModuleCamera3D : public Module
 {
 public:
@@ -17,7 +19,6 @@ public:
 	void LookAt(const vec3 &Spot);
 	void Move(const vec3 &Movement);
 	float* GetViewMatrix();
-
 private:
 
 	void CalculateViewMatrix();
@@ -25,7 +26,11 @@ private:
 public:
 	
 	vec3 X, Y, Z, Position, Reference;
+	float vehicleposx = 0.0;
+	float vehicleposy = 0.0;
+	float vehicleposz = 0.0;
 
+	bool camarita = true;
 private:
 
 	mat4x4 ViewMatrix, ViewMatrixInverse;
