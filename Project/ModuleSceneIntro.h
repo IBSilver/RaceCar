@@ -62,9 +62,16 @@ public:
 	Cube* suelo13;
 	Cube* suelo14;
 	Cube* suelo15;
+	Cube* suelo16;
+	Cube* suelo17;
+	Cube* suelo18;
+	Cube* suelo19;
+	Cube* suelofinal;
 
 	//Rampas
 	Cube* rampa1;
 	Cube* rampa2;
+	Cube* rampa3;
+	Cube* rampa4;
 
 };

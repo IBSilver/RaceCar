@@ -115,6 +115,62 @@ bool ModuleSceneIntro::Start()
 	mapa.add(rampa2);
 	bodiesmapa.add(App->physics->AddBody(*rampa2, 0));
 
+	rampa3 = new Cube(20, 1, 20);
+	rampa3->SetPos(5, 12.5, 500);
+	rampa3->SetRotation(-7.5f, { 0.5, 0, 0 });
+	rampa3->color = White;
+	mapa.add(rampa3);
+	bodiesmapa.add(App->physics->AddBody(*rampa3, 0));
+
+	suelo14 = new Cube(20, 1, 70);
+	suelo14->SetPos(5, 10, 570);
+	suelo14->color = White;
+	mapa.add(suelo14);
+	bodiesmapa.add(App->physics->AddBody(*suelo14, 0));
+
+	suelo15 = new Cube(180, 1, 20);
+	suelo15->SetPos(-95, 10, 595);
+	suelo15->color = White;
+	mapa.add(suelo15);
+	bodiesmapa.add(App->physics->AddBody(*suelo15, 0));
+
+	suelo16 = new Cube(20, 1, 60);
+	suelo16->SetPos(-195, 10, 575);
+	suelo16->color = White;
+	mapa.add(suelo16);
+	bodiesmapa.add(App->physics->AddBody(*suelo16, 0));
+
+	suelo17 = new Cube(80, 1, 20);
+	suelo17->SetPos(-245, 10, 555);
+	suelo17->color = White;
+	mapa.add(suelo17);
+	bodiesmapa.add(App->physics->AddBody(*suelo17, 0));
+
+	suelo18 = new Cube(80, 1, 20);
+	suelo18->SetPos(-305, 10, 575);
+	suelo18->color = White;
+	mapa.add(suelo18);
+	bodiesmapa.add(App->physics->AddBody(*suelo18, 0));
+
+	suelo19 = new Cube(80, 1, 40);
+	suelo19->SetPos(-385, 10, 575);
+	suelo19->color = White;
+	mapa.add(suelo19);
+	bodiesmapa.add(App->physics->AddBody(*suelo19, 0));
+
+	rampa4 = new Cube(20, 1, 200);
+	rampa4->SetPos(-385, 29, 470);
+	rampa4->SetRotation(11.0f, { 0.5, 0, 0 });
+	rampa4->color = White;
+	mapa.add(rampa4);
+	bodiesmapa.add(App->physics->AddBody(*rampa4, 0));
+
+	suelofinal = new Cube(100, 1, 100);
+	suelofinal->SetPos(-385, 48, 322);
+	suelofinal->color = White;
+	mapa.add(suelofinal);
+	bodiesmapa.add(App->physics->AddBody(*suelofinal, 0));
+
 
 
 	return ret;
@@ -137,6 +193,8 @@ update_status ModuleSceneIntro::Update(float dt)
 
 	rampa1->Render();
 	rampa2->Render();
+	rampa3->Render();
+	rampa4->Render();
 
 	suelo1->Render();
 	suelo2->Render();
@@ -151,6 +209,14 @@ update_status ModuleSceneIntro::Update(float dt)
 	suelo11->Render();
 	suelo12->Render();
 	suelo13->Render();
+	suelo14->Render();
+	suelo14->Render();
+	suelo15->Render();
+	suelo16->Render();
+	suelo17->Render();
+	suelo18->Render();
+	suelo19->Render();
+	suelofinal->Render();
 
 	return UPDATE_CONTINUE;
 }
