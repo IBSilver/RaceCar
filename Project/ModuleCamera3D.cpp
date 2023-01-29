@@ -42,7 +42,7 @@ update_status ModuleCamera3D::Update(float dt)
 {
 	// Implement a debug camera with keys and mouse
 	// Now we can make this movememnt frame rate independant!
-	if (App->input->GetKey(SDL_SCANCODE_L) == KEY_DOWN) {
+	if (App->input->GetKey(SDL_SCANCODE_C) == KEY_DOWN) {
 		if (camarita) { camarita = false; }
 		else { camarita = true; }
 	}
