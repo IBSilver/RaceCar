@@ -29,7 +29,6 @@ Race car game for the physics II subject
  - O: Subtracts weight from the car
  - P: Adds weight to the car
  - Space: Reset the level
- - F1: Show/Unshow colliders
 
 ## Developers
 
