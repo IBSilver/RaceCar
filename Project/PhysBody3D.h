@@ -5,6 +5,7 @@
 
 class btRigidBody;
 class Module;
+class vec3;
 
 // =================================================
 struct PhysBody3D
@@ -19,8 +20,11 @@ public:
 	void SetTransform(const float* matrix) const;
 	void SetPos(float x, float y, float z);
 
-private:
+	const vec3 GetPos() const;
 	btRigidBody* body = nullptr;
+
+private:
+	
 
 public:
 	p2List<Module*> collision_listeners;

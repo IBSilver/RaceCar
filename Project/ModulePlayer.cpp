@@ -3,7 +3,9 @@
 #include "ModulePlayer.h"
 #include "Primitive.h"
 #include "PhysVehicle3D.h"
+#include "ModulePhysics3D.h"
 #include "PhysBody3D.h"
+#include "ModuleSceneIntro.h"
 
 ModulePlayer::ModulePlayer(Application* app, bool start_enabled) : Module(app, start_enabled), vehicle(NULL)
 {
@@ -130,45 +132,70 @@ bool ModulePlayer::CleanUp()
 update_status ModulePlayer::Update(float dt)
 {
 	turn = acceleration = brake = 0.0f;
+	vec3 pos = vehicle->GetPos();
 
-	if(App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
-	{
-		acceleration = MAX_ACCELERATION;
+	//Lose condition
+	if (pos.y < 3) {
+		vehicle->SetPos(0, 14, 10);
 	}
 
-	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT)
+	//Win condition
+	if (pos.y > 58){
+		win = true;
+	}
+
+	//Cambia peso del coche
+	if (App->input->GetKey(SDL_SCANCODE_O) == KEY_DOWN)
 	{
-		if (vehicle->GetKmh() > 0.5f) {
-			brake = BRAKE_POWER;
+		vehicle->info.mass -= 100.0f;
+	}
+	if (App->input->GetKey(SDL_SCANCODE_P) == KEY_DOWN)
+	{
+		vehicle->info.mass += 100.0f;
+	}
+
+	if (!win) {
+		//Acelerar
+		if (App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
+		{
+			acceleration = MAX_ACCELERATION;
 		}
-		else {
-			acceleration = - MAX_ACCELERATION;
+
+		//Frenar y marcha atrás
+		if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT)
+		{
+			if (vehicle->GetKmh() > 0.5f) {
+				brake = BRAKE_POWER;
+			}
+			else {
+				acceleration = -MAX_ACCELERATION;
+			}
+		}
+
+		//Girar
+		if (App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT)
+		{
+			if (turn < TURN_DEGREES)
+				turn += TURN_DEGREES;
+		}
+		if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
+		{
+			if (turn > -TURN_DEGREES)
+				turn -= TURN_DEGREES;
 		}
 	}
+	
 
-	if(App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT)
-	{
-		if(turn < TURN_DEGREES)
-			turn +=  TURN_DEGREES;
-	}
-
-	if(App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
-	{
-		if(turn > -TURN_DEGREES)
-			turn -= TURN_DEGREES;
-	}
-
+	//Botón de reset
 	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_REPEAT)
 	{
 		vehicle->SetPos(0, 4, 10);
+		win = false;
 	}
-
-	
 
 	vehicle->ApplyEngineForce(acceleration);
 	vehicle->Turn(turn);
 	vehicle->Brake(brake);
-
 	vehicle->Render();
 
 	char title[80];

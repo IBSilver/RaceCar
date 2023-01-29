@@ -1,21 +1,10 @@
-﻿  Application.cpp
-  Main.cpp
-  ModuleAudio.cpp
-  ModuleCamera3D.cpp
-  ModuleInput.cpp
-  ModulePhysics3D.cpp
-  ModulePlayer.cpp
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(27,39): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(28,42): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(31,36): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(33,34): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(36,34): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(37,35): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(39,32): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(40,37): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-  ModuleRenderer3D.cpp
-  ModuleSceneIntro.cpp
-C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModuleSceneIntro.cpp(111,29): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-  ModuleWindow.cpp
-  Generando código...
+﻿  ModulePlayer.cpp
+C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(29,39): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(30,42): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(33,36): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(35,34): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(38,34): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(39,35): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(41,32): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ivanv\Documents\GitHub\RaceCar\Project\ModulePlayer.cpp(42,37): warning C4305: 'argumento': truncamiento de 'double' a 'float'
   3D Physics.vcxproj -> C:\Users\ivanv\Documents\GitHub\RaceCar\Project\Debug\3D Physics - class5.exe
