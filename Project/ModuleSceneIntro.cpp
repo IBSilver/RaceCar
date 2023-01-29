@@ -236,6 +236,17 @@ bool ModuleSceneIntro::Start()
 	mapa.add(pilar11);
 	bodiesmapa.add(App->physics->AddBody(*pilar11, 0));
 
+	sensorwin->SetPos(0, 0, 0);
+	sensorwin->size.x = 20;
+	sensorwin->size.y = 20;
+	sensorwin->size.z = 20;
+	sensorwin->axis = false;
+	sensorwin->wire = true;
+	sensorwin->color = Black;
+	/*SuperSensor = App->physics->AddBody(sensorwin, 0);
+	SuperSensor->SetAsSensor(1);
+	SuperSensor->SetId(2);*/
+
 
 
 	return ret;
