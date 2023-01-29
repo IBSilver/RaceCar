@@ -170,6 +170,74 @@ bool ModuleSceneIntro::Start()
 	mapa.add(suelofinal);
 	bodiesmapa.add(App->physics->AddBody(*suelofinal, 0));
 
+	pilar1 = new Cube(10, 10, 2);
+	pilar1->SetPos(-270, 15.5, 240);
+	pilar1->color = Red;
+	mapa.add(pilar1);
+	bodiesmapa.add(App->physics->AddBody(*pilar1, 0));
+
+	pilar2 = new Cube(10, 10, 2);
+	pilar2->SetPos(-280, 15.5, 260);
+	pilar2->color = Red;
+	mapa.add(pilar2);
+	bodiesmapa.add(App->physics->AddBody(*pilar2, 0));
+
+	pilar3 = new Cube(10, 10, 2);
+	pilar3->SetPos(-270, 15.5, 300);
+	pilar3->color = Red;
+	mapa.add(pilar3);
+	bodiesmapa.add(App->physics->AddBody(*pilar3, 0));
+
+	pilar4 = new Cube(10, 10, 2);
+	pilar4->SetPos(-280, 15.5, 320);
+	pilar4->color = Red;
+	mapa.add(pilar4);
+	bodiesmapa.add(App->physics->AddBody(*pilar4, 0));
+
+	pilar5 = new Cube(3, 10, 3);
+	pilar5->SetPos(-240, 15.5, 390);
+	pilar5->color = Red;
+	mapa.add(pilar5);
+	bodiesmapa.add(App->physics->AddBody(*pilar5, 0));
+
+	pilar6 = new Cube(3, 10, 3);
+	pilar6->SetPos(-238, 15.5, 410);
+	pilar6->color = Red;
+	mapa.add(pilar6);
+	bodiesmapa.add(App->physics->AddBody(*pilar6, 0));
+
+	pilar7 = new Cube(3, 10, 3);
+	pilar7->SetPos(-234, 15.5, 401);
+	pilar7->color = Red;
+	mapa.add(pilar7);
+	bodiesmapa.add(App->physics->AddBody(*pilar7, 0));
+
+	pilar8 = new Cube(3, 10, 3);
+	pilar8->SetPos(-230, 15.5, 393);
+	pilar8->color = Red;
+	mapa.add(pilar8);
+	bodiesmapa.add(App->physics->AddBody(*pilar8, 0));
+
+	pilar9 = new Cube(3, 10, 3);
+	pilar9->SetPos(-220, 15.5, 399);
+	pilar9->color = Red;
+	mapa.add(pilar9);
+	bodiesmapa.add(App->physics->AddBody(*pilar9, 0));
+
+	pilar10 = new Cube(3, 10, 3);
+	pilar10->SetPos(-210, 15.5, 415);
+	pilar10->color = Red;
+	mapa.add(pilar10);
+	bodiesmapa.add(App->physics->AddBody(*pilar10, 0));
+
+	pilar11 = new Cube(3, 10, 3);
+	pilar11->SetPos(-208, 15.5, 385);
+	pilar11->color = Red;
+	mapa.add(pilar11);
+	bodiesmapa.add(App->physics->AddBody(*pilar11, 0));
+
+
+
 	return ret;
 }
 
@@ -214,6 +282,18 @@ update_status ModuleSceneIntro::Update(float dt)
 	suelo18->Render();
 	suelo19->Render();
 	suelofinal->Render();
+
+	pilar1->Render();
+	pilar2->Render();
+	pilar3->Render();
+	pilar4->Render();
+	pilar5->Render();
+	pilar6->Render();
+	pilar7->Render();
+	pilar8->Render();
+	pilar9->Render();
+	pilar10->Render();
+	pilar11->Render();
 
 	return UPDATE_CONTINUE;
 }

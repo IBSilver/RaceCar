@@ -67,6 +67,24 @@ public:
 	Cube* suelo19;
 	Cube* suelofinal;
 
+	//Obstaculos
+	Cube* pilar1;
+	Cube* pilar2;
+	Cube* pilar3;
+	Cube* pilar4;
+	Cube* pilar5;
+	Cube* pilar6;
+	Cube* pilar7;
+	Cube* pilar8;
+	Cube* pilar9;
+	Cube* pilar10;
+	Cube* pilar11;
+	Cube* pilar12;
+	Cube* pilar13;
+	Cube* pilar14;
+	Cube* pilar15;
+
+
 	//Rampas
 	Cube* rampa1;
 	Cube* rampa2;
