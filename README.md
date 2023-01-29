@@ -1,53 +1,40 @@
-# Cyberpunk v1.0
+# Viktoria Race Car
 
 ## Description
 
-Platform game for the videogame development subject.
+Race car game for the physics II subject
 
-**Github Link:** https://github.com/IvanBSupc/GameDevelopment
+**Github Link:** https://github.com/IvanBSupc/RaceCar
 
-## Key Features
+## Features
 
- - Logo Scene & Title Scene.
- - Music for scenes and level & Fx for jump, death and win.
- - The player can move left or right, jump, die and win.
- - There are walking & flying enemies.
- - The player can obtain coins!!
- - If player lose three lifes, go back to the title screen.
- - The player lifes are displayed on the screen.
- 
- ## Navigation
-
- - Logo Scene: 5 seconds screen. Also can press Enter to go to the Title Screen.
- - Title Scene: Press Enter to start the level.
- - Dead Scene: Appears when you lose three lifes. Wait a few seconds and go to the Title Screen.
- - Smooth animations between scenes.
+ - Reach the goal without falling into the void. The goal is the highest platform.
+ - If you fall into the void, you lose. Try again. 
+ - If you reach the goal, your controls will be deactivated and you will have won.
+ - Drive carefully, dodge obstacles, and make an amazing jump to not fall.
  
 ## Controls
 
- - D: Move right
- - A: Move left
- - Space: Jump
- - Defeat enemies by stepping on them.
+ - Up arrow: Accelerate
+ - Down arrow: Deccelerate, stop, reverse (marcha atrás)
+ - Left/Right arrow: Direction
  
 ## Debug
 
- - F1: Start from the first/second level
- - F3: Start from the beginning of the current level
- - F5: Save the current game state
- - F6: Load the previous state
- - F9: View colliders / logic / enemies pathfinding
- - F10: God Mode (fly around, cannot be killed, cannot win)
- 
-## Extra debug functions
- 
- - F7: Instant death
- - F8: Instant win
+ - C: Active camera mode
+ - In camera mode:
+   - Use left click to to change camera direction
+   - Use WASD to move the camera
+   - Use shift to go faster
+ - O: Subtracts weight from the car
+ - P: Adds weight to the car
+ - F1: Show/Unshow colliders
 
 ## Developers
 
  - Iván Bermúdez Sagra
- - Lluc Estruch Andreu
+ - Rafael Esquius Pérez
+ - Pau Garriga Brotons
 
 ## License
 
