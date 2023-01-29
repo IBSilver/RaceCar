@@ -20,9 +20,8 @@ bool ModuleSceneIntro::Start()
 	App->camera->Move(vec3(1.0f, 1.0f, 0.0f));
 	App->camera->LookAt(vec3(0, 0, 0));
 
-	//aqui cramos el mapa
-	
-	//suelo del recorrido
+	//Aquí creamos el mapa
+	//Suelo del recorrido
 	suelo1 = new Cube(50, 1, 100);
 	suelo1->SetPos(0, 3, 30);
 	suelo1->color = White;
@@ -170,8 +169,6 @@ bool ModuleSceneIntro::Start()
 	suelofinal->color = White;
 	mapa.add(suelofinal);
 	bodiesmapa.add(App->physics->AddBody(*suelofinal, 0));
-
-
 
 	return ret;
 }

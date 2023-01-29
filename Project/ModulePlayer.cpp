@@ -39,8 +39,6 @@ bool ModulePlayer::Start()
 	car.grua4_size.Set(0.1, 1, 0.1);
 	car.grua4_offset.Set(-0.5, 3.5, 2.8);
 
-
-
 	car.mass = 500.0f;
 	car.suspensionStiffness = 15.88f;
 	car.suspensionCompression = 0.83f;
@@ -115,7 +113,7 @@ bool ModulePlayer::Start()
 	car.wheels[3].steering = false;
 
 	vehicle = App->physics->AddVehicle(car);
-	vehicle->SetPos(0, 12, 10);
+	vehicle->SetPos(0, 4, 10);
 	
 	return true;
 }
@@ -138,6 +136,11 @@ update_status ModulePlayer::Update(float dt)
 		acceleration = MAX_ACCELERATION;
 	}
 
+	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT)
+	{
+		brake = BRAKE_POWER;
+	}
+
 	if(App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT)
 	{
 		if(turn < TURN_DEGREES)
@@ -150,10 +153,12 @@ update_status ModulePlayer::Update(float dt)
 			turn -= TURN_DEGREES;
 	}
 
-	if(App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT)
+	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_REPEAT)
 	{
-		brake = BRAKE_POWER;
+		vehicle->SetPos(0, 4, 10);
 	}
+
+	
 
 	vehicle->ApplyEngineForce(acceleration);
 	vehicle->Turn(turn);

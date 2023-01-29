@@ -25,7 +25,7 @@ void PhysVehicle3D::Render()
 {
 	Cylinder wheel;
 
-	wheel.color = Grey;
+	wheel.color = Grey; //Color de ruedas
 
 	for(int i = 0; i < vehicle->getNumWheels(); ++i)
 	{
@@ -37,7 +37,8 @@ void PhysVehicle3D::Render()
 
 		wheel.Render();
 	}
-	// cubo central
+
+	//Cubo central
 	Cube chassis(info.chassis_size.x, info.chassis_size.y, info.chassis_size.z);
 	vehicle->getChassisWorldTransform().getOpenGLMatrix(&chassis.transform);
 	btQuaternion q = vehicle->getChassisWorldTransform().getRotation();
@@ -52,7 +53,7 @@ void PhysVehicle3D::Render()
 
 	chassis.Render();
 
-	//upperchassis
+	//Upperchassis
 	Cube upperchassis(info.upperchassis_size.x, info.upperchassis_size.y, info.upperchassis_size.z);
 	vehicle->getChassisWorldTransform().getOpenGLMatrix(&upperchassis.transform);
 	btQuaternion q0 = vehicle->getChassisWorldTransform().getRotation();
@@ -67,7 +68,7 @@ void PhysVehicle3D::Render()
 
 	upperchassis.Render();
 
-	//grua 1
+	//Grua 1
 	Cube grua1(info.grua1_size.x, info.grua1_size.y, info.grua1_size.z);
 	vehicle->getChassisWorldTransform().getOpenGLMatrix(&grua1.transform);
 	btQuaternion q1 = vehicle->getChassisWorldTransform().getRotation();
@@ -82,7 +83,7 @@ void PhysVehicle3D::Render()
 
 	grua1.Render();
 
-	//grua 2
+	//Grua 2
 	Cube grua2(info.grua2_size.x, info.grua2_size.y, info.grua2_size.z);
 	vehicle->getChassisWorldTransform().getOpenGLMatrix(&grua2.transform);
 	btQuaternion q2 = vehicle->getChassisWorldTransform().getRotation();
@@ -97,7 +98,7 @@ void PhysVehicle3D::Render()
 
 	grua2.Render();
 
-	//grua 3
+	//Grua 3
 	Cube grua3(info.grua3_size.x, info.grua3_size.y, info.grua3_size.z);
 	vehicle->getChassisWorldTransform().getOpenGLMatrix(&grua3.transform);
 	btQuaternion q3 = vehicle->getChassisWorldTransform().getRotation();
@@ -112,7 +113,7 @@ void PhysVehicle3D::Render()
 
 	grua3.Render();
 
-	//grua 4
+	//Grua 4
 	Cube grua4(info.grua4_size.x, info.grua4_size.y, info.grua4_size.z);
 	vehicle->getChassisWorldTransform().getOpenGLMatrix(&grua4.transform);
 	btQuaternion q4 = vehicle->getChassisWorldTransform().getRotation();
@@ -126,8 +127,6 @@ void PhysVehicle3D::Render()
 	grua4.color = Grey;
 
 	grua4.Render();
-
-	
 }
 
 vec3 PhysVehicle3D::GetForwardVector() const {

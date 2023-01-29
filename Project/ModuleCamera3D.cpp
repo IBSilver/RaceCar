@@ -46,8 +46,6 @@ update_status ModuleCamera3D::Update(float dt)
 		if (camarita) { camarita = false; }
 		else { camarita = true; }
 	}
-
-
 	
 	vec3 newPos(0,0,0);
 	float speed = 3.0f * dt;
@@ -82,7 +80,6 @@ update_status ModuleCamera3D::Update(float dt)
 	}	
 
 	// Mouse motion ----------------
-
 	if(App->input->GetMouseButton(SDL_BUTTON_RIGHT) == KEY_REPEAT)
 	{
 		int dx = -App->input->GetMouseXMotion();
